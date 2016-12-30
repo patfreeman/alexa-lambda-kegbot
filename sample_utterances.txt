@@ -1,0 +1,13 @@
+OnTap	what beer is on tap
+OnTap	what beer is on
+OnTap	what beer is pouring
+OnTap	what is on tap
+OnTap	what is on
+OnTap	what is pouring
+Volume	what percent is left
+Volume	what percent is left in the keg
+Volume	what percent is the keg at
+Volume	what is the keg percentage
+Volume	what is the beer percentage
+Volume	how much beer is left
+Volume	how much beer is there

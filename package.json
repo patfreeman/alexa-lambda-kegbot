@@ -1,0 +1,12 @@
+{
+    "name": "alexa-lambda-kegbot",
+    "version": "0.0.1",
+    "description": "An Amazon Echo Custom Skill for getting KegBot info",
+    "keywords": ["Lambda", "AWS", "KegBot", "Beer", "Amazon Echo"],
+    "main": "index.js",
+    "author": "patfreeman (https://github.org/patfreeman)",
+    "dependencies": {
+        "alexa-sdk": "^1.0.6",
+        "request": "^2.65.0"
+    }
+}

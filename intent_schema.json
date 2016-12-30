@@ -1,0 +1,13 @@
+{
+  "intents": [
+    {
+      "intent": "OnTap"
+    },
+    {
+      "intent": "Volume"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}
