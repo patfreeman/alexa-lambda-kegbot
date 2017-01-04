@@ -1,13 +1,15 @@
-# Alexa-Lambda-KegBot
-Alexa-Lambda-KegBot is an Alexa Skill for communication with your KegBot. Currently is supports the following:
+# Alexa-Lambda-Kegbot
+Alexa-Lambda-Kegbot is an Alexa Skill for communication with your Kegbot. Currently is supports the following:
 * What's on tap?
 * How much is left?
+
+For a more home friendly setup, maybe the alexa-app version is better: [alexa-app-kegbot](https://github.com/patfreeman/alexa-app-kegbot)
 
 ### Requirements
 * node - NodeJS http://nodejs.org
 * request - NodeJS package https://www.npmjs.com/package/request
 * alexa-sdk - NodeJS package https://www.npmjs.com/package/alexa-sdk
-* AWS account with a connection to your KegBot server to run the lambda
+* AWS account with a connection to your Kegbot server to run the lambda
 * AWS Developer account from https://developer.amazon.com to create skill
 
 ### Setup
@@ -18,7 +20,7 @@ Alexa-Lambda-KegBot is an Alexa Skill for communication with your KegBot. Curren
     1. Skill Information
     1. Skill Type as Custom Interaction Model
     1. Name - Give it a name
-    1. Invocation Name - Give it an Invocation Name. For "Alexa, Ask KegBot..." use KegBot.
+    1. Invocation Name - Give it an Invocation Name. For "Alexa, Ask Kegbot..." use Kegbot.
     1. Next
   1. Note ID at the top of the page
   1. We'll come back to this later
@@ -27,7 +29,7 @@ Alexa-Lambda-KegBot is an Alexa Skill for communication with your KegBot. Curren
 1. `npm install`
 1. `cp config_example.js config.js`
 1. `vi config.js`
-  1. Set your KegBot configuration. Protocol, host, port, API key (if required)
+  1. Set your Kegbot configuration. Protocol, host, port, API key (if required)
 1. `zip -r ../alk.zip ./`
 1. Create Lambda
   1. In the AWS Lambda console https://console.aws.amazon.com/lambda/home?region=us-east-1#/
@@ -43,7 +45,7 @@ Alexa-Lambda-KegBot is an Alexa Skill for communication with your KegBot. Curren
     1. Role - lambda_basic_vpc_execution should be enough.
     1. Memory - 128MB is more than enough
     1. Timeout - Set this to greater than the value you defined in config.js
-    1. Choose your VPC, Subnet, and Security Groups that have access to your KegBot server
+    1. Choose your VPC, Subnet, and Security Groups that have access to your Kegbot server
     1. Click Next, then Create Function
   1. Note ARN in upper right corner
 1. Go back to Alexa Skill setup on https://developer.amazon.com/

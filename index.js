@@ -1,4 +1,4 @@
-// Alexa Lambda KegBot Integration
+// Alexa Lambda Kegbot Integration
 // Written by patfreeman
 // https://github.com/patfreeman/alexa-lambda-kegbot
 
@@ -75,7 +75,7 @@ const handlers = {
 const languageStrings = {
     'en-US': {
         translation: {
-            SKILL_NAME: 'KegBot',
+            SKILL_NAME: 'Kegbot',
             HELP_MESSAGE: 'You can ask questions such as, what\'s on tap, or, how much is left...Now, what can I help you with?',
         },
     },

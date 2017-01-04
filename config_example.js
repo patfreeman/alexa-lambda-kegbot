@@ -8,7 +8,7 @@ config.applicationName = 'Keg Bot';
 // AWS ASK applicationId, resembles 'amzn1.ask.skill.[your-unique-value-here]'
 config.applicationId = 'amzn1.ask.skill.XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX';
 
-/***************************** KegBot CONFIGURATION ********************************************/
+/***************************** Kegbot CONFIGURATION ********************************************/
 // KB server protocol (http/https)
 config.KB_protocol = 'https';
 
@@ -22,11 +22,11 @@ config.KB_port = '443';
 // comment out if not needed
 config.KB_apikey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-// Timeout to wait for a response from KegBot (in milliseconds)
+// Timeout to wait for a response from Kegbot (in milliseconds)
 config.timeout = 500;
-/***************************** KegBot CONFIGURATION END ****************************************/
+/***************************** Kegbot CONFIGURATION END ****************************************/
 
-// KB server URL with credentials - i.e. 'http(s)://KB_SERVER_IP:KB_SERVER_PORT' (constructed from above variables)
+// KB server URL construction
 if ( config.KB_port ) {
     config.KB_server = config.KB_protocol + '://' + config.KB_host + ':' + config.KB_port;
 } else {
