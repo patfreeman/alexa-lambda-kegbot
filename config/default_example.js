@@ -13,12 +13,14 @@ config.applicationId = 'amzn1.ask.skill.XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX';
 config.KB_protocol = 'https';
 
 // KB server FQDN/IP
+// AWS Lambda must be able to reach this IP/URL
 config.KB_host = '192.168.0.1';
 
 // KB server port. Can be commented out if using standard ports.
 config.KB_port = '443';
 
 // KB server api_key if required
+// Not needed for default /api/taps endpoint
 // comment out if not needed
 config.KB_apikey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
