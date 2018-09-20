@@ -40,23 +40,23 @@ For a more home friendly setup, maybe the alexa-app version is better: [alexa-ap
 1. Create Lambda
   	1. In the AWS Lambda console https://console.aws.amazon.com/lambda/home?region=us-east-1#/
   	1. Create a Lambda Function
-    		1. Choose "Author from scratch"
-    		1. Name - Give it a name
-    		1. Runtime - Choose NodeJS 4.3
-			1. Role - Choose a role or create a new one from templates(s)
-			1. Role name - Enter if required
-			1. Policy templates - leave blank
-    		1. Click "Create Function"
+		1. Choose "Author from scratch
+		1. Name - Give it a name
+		1. Runtime - Choose NodeJS 4.3
+		1. Role - Choose a role or create a new one from templates(s)
+		1. Role name - Enter if required
+		1. Policy templates - leave blank
+		1. Click "Create Function"
  	1. Configure the Lambda Function
-    		1. Under Function code, change Code entry type to Upload a .ZIP file
-			1. Click "Upload" and select the ZIP you created above
-			1. Leave Node.js 4.3 selected
-    		1. Handler needs to stay as index.handler
+		1. Under Function code, change Code entry type to Upload a .ZIP file
+		1. Click "Upload" and select the ZIP you created above
+		1. Leave Node.js 4.3 selected
+		1. Handler needs to stay as index.handler
 		1. Environment variables - leave blank
 		1. Tags - leave blank
 		1. Execution role - should already be populated with the role selected above
 		1. Basic Settings
-	  		1. Description - if you care
+	  	1. Description - if you care
       		1. Memory - 128MB is more than enough
       		1. Timeout - Set this to greater than the value you defined in default.js
 		1. Network - Leave as "No VPC"
@@ -65,13 +65,13 @@ For a more home friendly setup, maybe the alexa-app version is better: [alexa-ap
 		1. Auditing and Compliance - No changes
 		1. Click "Save" in the top-right corner of the screen.
   	1. Add Alexa Skill Trigger
-    		1. Expand the Lambda Designer window
+		1. Expand the Lambda Designer window
     		1. Under Add triggers, select Alexa Skills Kit
 	  	1. Paste in the Alexa Skill ID you saved from above
       		1. Click Add
     		1. Clikc "Save" in the top-right corner of the screen.   	
 	1. Test your Lambda Function
-  		1. Select "Select a test event..." in the drop-down in the top-right corner
+		1. Select "Select a test event..." in the drop-down in the top-right corner
   		1. Select "Configure test events"
   		1. Give the test a name
   		1. Paste in the code in the `alexa_test_script.json` file
@@ -89,7 +89,7 @@ For a more home friendly setup, maybe the alexa-app version is better: [alexa-ap
 		1. Paste the ARN for your Lambda created above under Default Region
 		1. Click "Save Endpoint"
   	1. Under Interation Model
-    		1. Invocation - set the words you would like to launch your skill (can be different from skill name)
+		1. Invocation - set the words you would like to launch your skill (can be different from skill name)
 		1. Intents - there are multiple ways to do this, but I've found this to be the easiest
 	  		1. Click Add Intent
 	  		1. Enter the name `OnTap`
