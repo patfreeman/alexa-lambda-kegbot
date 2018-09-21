@@ -20,7 +20,7 @@ config.KB_host = '192.168.0.1';
 config.KB_port = '443';
 
 // KB server api_key if required
-// Not needed for default /api/taps endpoint
+// Required if your Kegbot Server Privacy Setting is not configured as Public
 // comment out if not needed
 config.KB_apikey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
