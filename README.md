@@ -30,13 +30,11 @@ For a more home friendly setup, maybe the alexa-app version is better: [alexa-ap
 	1. Clone Repo: `git clone https://github.com/patfreeman/alexa-lambda-kegbot.git`
 	1. `cd alexa-lambda-kegbot`
 	1. `npm install`
-	1. `cd config`
-	1. `cp default_example.js default.js`
-	1. `vi default.js`
+	1. `cp config/default_example.js config.js`
+	1. `vi config.js`
   		1. Set your Kegbot configuration. Protocol, host, port, API key (if required)
   		1. **Make sure to set the ALEXA SKILL ID in the default.js file - this is required**
-	1. `cd ..` 
-	1. `zip -r alk.zip .` NOTE: Make sure you are in the directory with the index.js file.
+	1. `zip -r ../alk.zip .` NOTE: Make sure you are in the directory with the index.js file.
 1. Create Lambda
   	1. In the AWS Lambda console https://console.aws.amazon.com/lambda/home?region=us-east-1#/
   	1. Create a Lambda Function
