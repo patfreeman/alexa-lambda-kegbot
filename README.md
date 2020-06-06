@@ -33,6 +33,7 @@ For a more home friendly setup, maybe the alexa-app version is better: [alexa-ap
 	1. `cp config/default_example.js config.js`
 	1. `vi config.js`
   		1. Set your Kegbot configuration. Protocol, host, port, API key (if required)
+		1. 'cp config.js config/default.js'
   		1. **Make sure to set the ALEXA SKILL ID in the default.js file - this is required**
 	1. `zip -r ../alk.zip .` NOTE: Make sure you are in the directory with the index.js file.
 1. Create Lambda
