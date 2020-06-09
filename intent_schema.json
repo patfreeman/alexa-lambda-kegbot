@@ -1,13 +1,192 @@
 {
-  "intents": [
-    {
-      "intent": "OnTap"
-    },
-    {
-      "intent": "Volume"
-    },
-    {
-      "intent": "AMAZON.HelpIntent"
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "keg bot",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "OnTapIntent",
+                    "slots": [
+                        {
+                            "name": "TapNumber",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "what is on",
+                        "what beer is on",
+                        "what is on tap",
+                        "what beer is on tap",
+                        "what is pouring",
+                        "what beer is pouring",
+                        "what is on number {TapNumber}",
+                        "what beer is on number {TapNumber}",
+                        "what is on tap number {TapNumber}",
+                        "what beer is on tap number {TapNumber}"
+                    ]
+                },
+                {
+                    "name": "RecentIntent",
+                    "slots": [],
+                    "samples": [
+                        "when was the last session",
+                        "whats been happening",
+                        "whats happening",
+                        "who has been drinking",
+                        "who has been drinking recent",
+                        "who has been drinking recently"
+                    ]
+                },
+                {
+                    "name": "VolumeIntent",
+                    "slots": [
+                        {
+                            "name": "VolumeUnits",
+                            "type": "UNITS_TYPE"
+                        },
+                        {
+                            "name": "TapNumber",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "how much beer is left",
+                        "how much is left",
+                        "how much beer is there",
+                        "how much is there",
+                        "how much beer is left in {VolumeUnits}",
+                        "how much is left in {VolumeUnits}",
+                        "how much beer is there in {VolumeUnits}",
+                        "how much is there in {VolumeUnits}",
+                        "how much beer is left in keg {TapNumber}",
+                        "how much is left in keg {TapNumber}",
+                        "how much beer is there in keg {TapNumber}",
+                        "how much is there in keg {TapNumber}",
+                        "how much beer is left in tap {TapNumber}",
+                        "how much is left in tap {TapNumber}",
+                        "how much beer is there in tap {TapNumber}",
+                        "how much is there in tap {TapNumber}",
+                        "how much beer is left in keg number {TapNumber}",
+                        "how much is left in keg number {TapNumber}",
+                        "how much beer is there in keg number {TapNumber}",
+                        "how much is there in keg number {TapNumber}",
+                        "how much beer is left in tap number {TapNumber}",
+                        "how much is left in tap number {TapNumber}",
+                        "how much beer is there in tap number {TapNumber}",
+                        "how much is there in tap number {TapNumber}",
+                        "how much beer is left in keg {TapNumber} reported in {VolumeUnits}",
+                        "how much is left in keg {TapNumber} reported in {VolumeUnits}",
+                        "how much beer is there in keg {TapNumber} reported in {VolumeUnits}",
+                        "how much is there in keg {TapNumber} reported in {VolumeUnits}",
+                        "how much beer is left in tap {TapNumber} reported in {VolumeUnits}",
+                        "how much is left in tap {TapNumber} reported in {VolumeUnits}",
+                        "how much beer is there in tap {TapNumber} reported in {VolumeUnits}",
+                        "how much is there in tap {TapNumber} reported in {VolumeUnits}",
+                        "how much beer is left in keg number {TapNumber} reported in {VolumeUnits}",
+                        "how much is left in keg number {TapNumber} reported in {VolumeUnits}",
+                        "how much beer is there in keg number {TapNumber} reported in {VolumeUnits}",
+                        "how much is there in keg number {TapNumber} reported in {VolumeUnits}",
+                        "how much beer is left in tap number {TapNumber} reported in {VolumeUnits}",
+                        "how much is left in tap number {TapNumber} reported in {VolumeUnits}",
+                        "how much beer is there in tap number {TapNumber} reported in {VolumeUnits}",
+                        "how much is there in tap number {TapNumber} reported in {VolumeUnits}",
+                        "how much beer is left in keg {TapNumber} in {VolumeUnits}",
+                        "how much is left in keg {TapNumber} in {VolumeUnits}",
+                        "how much beer is there in keg {TapNumber} in {VolumeUnits}",
+                        "how much is there in keg {TapNumber} in {VolumeUnits}",
+                        "how much beer is left in tap {TapNumber} in {VolumeUnits}",
+                        "how much is left in tap {TapNumber} in {VolumeUnits}",
+                        "how much beer is there in tap {TapNumber} in {VolumeUnits}",
+                        "how much is there in tap {TapNumber} in {VolumeUnits}",
+                        "how much beer is left in keg number {TapNumber} in {VolumeUnits}",
+                        "how much is left in keg number {TapNumber} in {VolumeUnits}",
+                        "how much beer is there in keg number {TapNumber} in {VolumeUnits}",
+                        "how much is there in keg number {TapNumber} in {VolumeUnits}",
+                        "how much beer is left in tap number {TapNumber} in {VolumeUnits}",
+                        "how much is left in tap number {TapNumber} in {VolumeUnits}",
+                        "how much beer is there in tap number {TapNumber} in {VolumeUnits}",
+                        "how much is there in tap number {TapNumber} in {VolumeUnits}",
+                        "how many {VolumeUnits} are left",
+                        "how many {VolumeUnits} are left in the keg",
+                        "how many {VolumeUnits} are left in keg {TapNumber}",
+                        "how many {VolumeUnits} are left in the keg in keg {TapNumber}",
+                        "how many {VolumeUnits} are left in the keg in tap {TapNumber}",
+                        "how many {VolumeUnits} are left in keg number {TapNumber}",
+                        "how many {VolumeUnits} are left in tap number {TapNumber}",
+                        "how many {VolumeUnits} are left in the keg in keg number {TapNumber}",
+                        "how many {VolumeUnits} are left in the keg in tap number {TapNumber}",
+                        "what {VolumeUnits} is left",
+                        "what {VolumeUnits} is left in the keg",
+                        "what {VolumeUnits} is the keg at",
+                        "what is the keg {VolumeUnits}",
+                        "what is the beer {VolumeUnits}",
+                        "what {VolumeUnits} is left in keg {TapNumber}",
+                        "what {VolumeUnits} is left in tap {TapNumber}",
+                        "what {VolumeUnits} is left in keg number {TapNumber}",
+                        "what {VolumeUnits} is left in tap number {TapNumber}",
+                        "what is the keg {VolumeUnits} in keg {TapNumber}",
+                        "what is the beer {VolumeUnits} in keg {TapNumber}",
+                        "what is the keg {VolumeUnits} in tap number {TapNumber}",
+                        "what is the beer {VolumeUnits} in tap number {TapNumber}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "UNITS_TYPE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "pints"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "litres"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "liters"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "percent"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "percentage"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
     }
-  ]
 }

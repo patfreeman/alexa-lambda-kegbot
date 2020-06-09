@@ -1,12 +1,12 @@
+// Alexa Lambda Kegbot Integration
+// Copyright 2016-2020 Pat Freeman <github@e2r4.com>
+// https://github.com/patfreeman/alexa-lambda-kegbot
+
 var config = {};
 
 // Name of the application/skill, which does not need to match the skills 'Invocation Name',
 // This is what the application calls itself in the voice prompts. The space helps the speech.
 config.applicationName = 'Keg Bot';
-
-/***************************** Skills CONFIGURATION ********************************************/
-// AWS ASK applicationId, resembles 'amzn1.ask.skill.[your-unique-value-here]'
-config.applicationId = 'amzn1.ask.skill.XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX';
 
 /***************************** Kegbot CONFIGURATION ********************************************/
 // KB server protocol (http/https)
