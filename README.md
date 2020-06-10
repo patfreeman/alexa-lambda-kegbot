@@ -1,7 +1,10 @@
 # Alexa-Lambda-Kegbot
-Alexa-Lambda-Kegbot is an Alexa Skill for communication with your Kegbot. Currently is supports the following:
+Alexa-Lambda-Kegbot is an Alexa Skill for communication with your Kegbot. Currently it supports questions the following:
 * What's on tap?
 * How much is left?
+* Who has been drinking recently?
+See [intent_schema.json](./intent_schema.json) for all the sample utterances.
+
 
 For a more home friendly setup, maybe the alexa-app version is better: [alexa-app-kegbot](https://github.com/patfreeman/alexa-app-kegbot)
 
@@ -22,7 +25,7 @@ For a more home friendly setup, maybe the alexa-app version is better: [alexa-ap
 	1. Select the "Start from scratch" template
 	1. Click "Choose"
 	1. Go to the "JSON Editor" in the left nav
-	1. Upload the intent_schema.json
+	1. Upload the [intent_schema.json](./intent_schema.json)
 	1. Click "Build Model"
 	1. Click "Your Skills" to return to the skill listing
 	1. Click on "View Skill ID" under your Skill Name
@@ -68,7 +71,7 @@ For a more home friendly setup, maybe the alexa-app version is better: [alexa-ap
 		1. Select "Select a test event..." in the drop-down in the top-right corner
 		1. Select "Configure test events"
 		1. Give the test a name
-		1. Paste in the code in the `alexa_test_script.json` file
+		1. Paste in the code in the [alexa_test_script.json](./alexa_test_script.json) file
 		1. Click Create
 		1. Click "Test"
 		1. You should see success and the JSON response should show what is on tap on your kegbot
