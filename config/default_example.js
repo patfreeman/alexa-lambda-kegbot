@@ -26,6 +26,10 @@ config.KB_apikey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
 // Timeout to wait for a response from Kegbot (in milliseconds)
 config.timeout = 500;
+
+// Preferred Units - Choose One
+config.units = "imperial";
+//config.units = "metric";
 /***************************** Kegbot CONFIGURATION END ****************************************/
 
 // KB server URL construction
