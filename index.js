@@ -154,22 +154,20 @@ const VolumeHandler = {
     console.log(handlerInput.requestEnvelope.request.intent.slot);
     var TapNumber = undefined;
     var VolumeUnits = undefined;
-    if (handlerInput.requestEnvelope.request.intent.slot) {
-      if (handlerInput.requestEnvelope.request.intent.slot.TapNumber) {
+    if (handlerInput.requestEnvelope.request.intent.slots) {
+      if (handlerInput.requestEnvelope.request.intent.slots.TapNumber) {
         TapNumber =
-          handlerInput.requestEnvelope.request.intent.slot.TapNumber.value;
+          handlerInput.requestEnvelope.request.intent.slots.TapNumber.value;
       }
-      if (handlerInput.requestEnvelope.request.intent.slot.VolumeUnits) {
+      if (handlerInput.requestEnvelope.request.intent.slots.VolumeUnits) {
         VolumeUnits =
-          handlerInput.requestEnvelope.request.intent.slot.VolumeUnits.value;
+          handlerInput.requestEnvelope.request.intent.slots.VolumeUnits.value;
       }
     }
     const kegs = await kegbot.getCurrentKegs();
     console.log(kegs);
     if (VolumeUnits == undefined && config.units == "imperial") {
       VolumeUnits = "pints";
-    } else {
-      VolumeUnits = "liters";
     }
     var speechOutput = config.applicationName;
     if (TapNumber && (TapNumber > kegs.length || TapNumber < 1)) {
