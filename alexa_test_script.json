@@ -1,9 +1,21 @@
 {
+  "version": "1.0",
+  "session": { },
+  "context": {
+    "System": { }
+  },
   "request": {
     "locale": "en-US",
     "type": "IntentRequest",
     "intent": {
-      "name": "OnTapIntent"
+      "name": "OnTapIntent",
+      "confirmationStatus": "NONE",
+      "slots": {
+        "TapNumber": {
+          "name": "TapNumber",
+          "confirmationStatus": "NONE"
+        }
+      }
     }
   }
 }
