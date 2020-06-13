@@ -1,13 +1,24 @@
 {
     "name": "alexa-lambda-kegbot",
-    "version": "0.0.1",
+    "version": "0.2.0",
     "description": "A custom Amazon Alexa Skill for getting Kegbot info",
-    "keywords": ["Lambda", "AWS", "Kegbot", "Beer", "Amazon Echo"],
+    "keywords": [
+        "Lambda",
+        "AWS",
+        "Kegbot",
+        "Beer",
+        "Amazon Echo"
+    ],
     "main": "index.js",
     "author": "patfreeman (https://github.org/patfreeman)",
+    "repository": "https://github.com/patfreeman/alexa-kegbot-lambda",
+    "license": "MIT",
     "dependencies": {
-        "alexa-sdk": "^1.0.6",
-	"config": "^2.0.1",
-        "request": "^2.65.0"
+        "ask-sdk-core": ">=2.8.0",
+        "ask-sdk-model": ">=1.28.0",
+        "i18next": ">=11.8.0",
+        "i18next-sprintf-postprocessor": ">=0.2.0",
+        "javascript-time-ago": ">=0.4.0",
+        "intl-messageformat": ">0.0.0"
     }
 }
