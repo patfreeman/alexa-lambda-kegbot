@@ -36,17 +36,20 @@ const OnTapHandler = {
   },
   async handle(handlerInput) {
     var TapNumber = undefined;
-    if (handlerInput.requestEnvelope.request.intent.slot) {
-      if (handlerInput.requestEnvelope.request.intent.slot.TapNumber) {
+    if (handlerInput.requestEnvelope.request.intent.slots) {
+      if (handlerInput.requestEnvelope.request.intent.slots.TapNumber) {
         TapNumber =
-          handlerInput.requestEnvelope.request.intent.slot.TapNumber.value;
+          handlerInput.requestEnvelope.request.intent.slots.TapNumber.value;
       }
     }
     const kegs = await kegbot.getCurrentKegs();
     console.log(kegs);
     var speechOutput = config.applicationName;
     if (TapNumber && (TapNumber > kegs.length || TapNumber < 1)) {
-      speechOutput += " only has " + kegs.length + " taps";
+      speechOutput += " only has " + kegs.length + " tap";
+      if (kegs.length > 1) {
+        speechOutput += "s";
+      }
     } else if (TapNumber && TapNumber <= kegs.length) {
       var keg = kegs[TapNumber - 1];
       if (keg == undefined) {
@@ -75,8 +78,6 @@ const OnTapHandler = {
   },
 };
 
-const same_session = (drink, session) => drink.session_id == session;
-
 const RecentHandler = {
   canHandle(handlerInput) {
     const request = handlerInput.requestEnvelope.request;
@@ -86,13 +87,17 @@ const RecentHandler = {
     );
   },
   async handle(handlerInput) {
+    try {
+      await callDirectiveService(handlerInput, "Wow! That's a lot of drinks.");
+    } catch (err) {
+      console.log("Directive failed: " + err);
+    }
     const drinks = await kegbot.getCurrentDrinks();
     console.log(drinks);
     var speechOutput = config.applicationName;
     if (drinks) {
-      var sessionId = drinks[0].session_id1;
       var keg = {};
-      drinks.some(same_session(sessionId)).forEach(function (drink, index) {
+      drinks.forEach(function (drink, index) {
         if (drink == undefined) {
           return;
         }
@@ -151,7 +156,6 @@ const VolumeHandler = {
     );
   },
   async handle(handlerInput) {
-    console.log(handlerInput.requestEnvelope.request.intent.slot);
     var TapNumber = undefined;
     var VolumeUnits = undefined;
     if (handlerInput.requestEnvelope.request.intent.slots) {
@@ -270,6 +274,27 @@ const LocalizationInterceptor = {
   },
 };
 
+function callDirectiveService(handlerInput, message) {
+  const requestEnvelope = handlerInput.requestEnvelope;
+  const directiveServiceClient = handlerInput.serviceClientFactory.getDirectiveServiceClient();
+
+  const requestId = requestEnvelope.request.requestId;
+  const endpoint = requestEnvelope.context.System.apiEndpoint;
+  const token = requestEnvelope.context.System.apiAccessToken;
+
+  const directive = {
+    header: {
+      requestId,
+    },
+    directive: {
+      type: 'VoicePlayer.Speak',
+      speech: message,
+    },
+  };
+
+  return directiveServiceClient.enqueue(directive, endpoint, token);
+}
+
 const skillBuilder = Alexa.SkillBuilders.custom();
 exports.handler = skillBuilder
   .addRequestHandlers(OnTapHandler)
@@ -277,4 +302,5 @@ exports.handler = skillBuilder
   .addRequestHandlers(VolumeHandler)
   .addRequestInterceptors(LocalizationInterceptor)
   .addErrorHandlers(ErrorHandler)
+  .withApiClient(new Alexa.DefaultApiClient())
   .lambda();
