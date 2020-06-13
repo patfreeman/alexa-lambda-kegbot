@@ -199,6 +199,7 @@ const VolumeHandler = {
     } else if (kegs) {
       kegs.forEach(function (keg, index) {
         if (keg == undefined) {
+        speechOutput += " has nothing remaining on tap number " + (index + 1);
           return;
         }
         if (kegs.length > 1 && index === kegs.length - 1) {
