@@ -6,8 +6,6 @@ Alexa-Lambda-Kegbot is an Alexa Skill for communication with your Kegbot. Curren
 
 See [intent_schema.json](./intent_schema.json) for all the sample utterances.
 
-For a more home friendly setup, maybe the alexa-app version is better: [alexa-app-kegbot](https://github.com/patfreeman/alexa-app-kegbot)
-
 ### Requirements
 * node - NodeJS http://nodejs.org
 * AWS account with a connection to your Kegbot server to run the lambda
