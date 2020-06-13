@@ -37,6 +37,9 @@
                         }
                     ],
                     "samples": [
+                        "whats on tap",
+                        "whats on tap {TapNumber}",
+                        "whats on tap number {TapNumber}",
                         "what is on",
                         "what beer is on",
                         "what is on tap",
