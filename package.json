@@ -14,7 +14,7 @@
     "repository": "https://github.com/patfreeman/alexa-kegbot-lambda",
     "license": "MIT",
     "dependencies": {
-        "ask-sdk-core": ">=2.0.0",
+        "ask-sdk-core": ">=2.8.0",
         "ask-sdk-model": ">=1.28.0",
         "i18next": ">=11.8.0",
         "i18next-sprintf-postprocessor": ">=0.2.0",

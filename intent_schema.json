@@ -43,6 +43,8 @@
                         "what beer is on tap",
                         "what is pouring",
                         "what beer is pouring",
+                        "what beer is on {TapNumber}",
+                        "what is on tap {TapNumber}",
                         "what is on number {TapNumber}",
                         "what beer is on number {TapNumber}",
                         "what is on tap number {TapNumber}",

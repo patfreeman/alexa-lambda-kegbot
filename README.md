@@ -16,16 +16,15 @@ For a more home friendly setup, maybe the alexa-app version is better: [alexa-ap
 ### Setup
 1. Setup a new *custom* Alexa Skill on https://developer.amazon.com/alexa/console/ask/create-new-skill
 	1. Login
-	1. In the ALEXA Skills tab, click Create Skill
 	1. Enter a Skill Name
-	1. Select a language
+	1. Select a language, although a lot of this is english...
 	1. Choose *Custom* model
 	1. Choose "Provision your own" method of hosting
 	1. Click "Create Skill"
 	1. Select the "Start from scratch" template
 	1. Click "Choose"
 	1. Go to the "JSON Editor" in the left nav
-	1. Upload the [intent_schema.json](./intent_schema.json)
+	1. Drag and drop a .json file, or click it and upload [intent_schema.json](./intent_schema.json)
 	1. Click "Build Model"
 	1. Click "Your Skills" to return to the skill listing
 	1. Click on "View Skill ID" under your Skill Name
@@ -57,7 +56,7 @@ For a more home friendly setup, maybe the alexa-app version is better: [alexa-ap
 		1. Tags - leave blank, or don't. that's up to you
 		1. Description - if you care
 		1. Memory - 128MB is more than enough
-		1. Timeout - Set this to greater than the value you defined in default.js
+		1. Timeout - Set this to 10s
 		1. Network - Leave as "No VPC" or if you know you need it, then you probably don't need these step by step instructions.
 		1. Concurrency - Use unreserved account concurrency
 		1. etc ...
@@ -87,7 +86,7 @@ For a more home friendly setup, maybe the alexa-app version is better: [alexa-ap
 		1. Click on the Test Tab
 		1. Click the switch to enable Testing
 		1. Type in phrases (or speak them) into the test interface.
-		1. "ask my kegbot what is on tap"
-		1. "ask my kegbot how much beer is left"
-		1. Replace "my kegbot" with your Invocation phrase you configured earlier
+		1. "ask keg bot what is on tap"
+		1. "ask keg bot how much beer is left"
+		1. Replace "keg bot" with your Invocation phrase you configured earlier
 		1. Try talking to Alexa
