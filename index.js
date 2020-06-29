@@ -57,10 +57,10 @@ const OnTapHandler = {
       } else {
         speechOutput += " has " + keg.type.name + " on tap number " + TapNumber;
       }
-    } else if (kegs) {
+    } else if (kegs.length) {
       kegs.forEach(function (keg, index) {
         if (keg == undefined) {
-        speechOutput += " has nothing on tap number " + (index + 1);
+          speechOutput += " has nothing on tap number " + (index + 1);
           return;
         }
         if (kegs.length > 1 && index === kegs.length - 1) {
@@ -71,6 +71,8 @@ const OnTapHandler = {
           speechOutput += " number " + (index + 1);
         }
       });
+    } else {
+      speechOutput += " has nothing on tap.";
     }
     return handlerInput.responseBuilder
       .speak(speechOutput)
@@ -196,10 +198,10 @@ const VolumeHandler = {
         }
         speechOutput += " of " + keg.type.name + " on tap number " + TapNumber;
       }
-    } else if (kegs) {
+    } else if (kegs.length) {
       kegs.forEach(function (keg, index) {
         if (keg == undefined) {
-        speechOutput += " has nothing remaining on tap number " + (index + 1);
+          speechOutput += " has nothing remaining on tap number " + (index + 1);
           return;
         }
         if (kegs.length > 1 && index === kegs.length - 1) {
@@ -224,6 +226,8 @@ const VolumeHandler = {
           speechOutput += ".";
         }
       });
+    } else {
+      speechOutput += " has nothing on tap.";
     }
     return handlerInput.responseBuilder
       .speak(speechOutput)
@@ -289,7 +293,7 @@ function callDirectiveService(handlerInput, message) {
       requestId,
     },
     directive: {
-      type: 'VoicePlayer.Speak',
+      type: "VoicePlayer.Speak",
       speech: message,
     },
   };
