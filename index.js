@@ -187,14 +187,14 @@ const VolumeHandler = {
         if (VolumeUnits === "pints") {
           speechOutput +=
             " has " +
-            (keg.volume_ml_remain / 473.176).toPrecision(2) +
+            Math.round((keg.volume_ml_remain / 473.176)) +
             " pints";
         } else if (VolumeUnits === "percent" || VolumeUnits === "percentage") {
           speechOutput +=
             " has " + keg.percent_full.toPrecision(2) + " percent";
         } else {
           speechOutput +=
-            " has " + (keg.volume_ml_remain / 1000).toPrecision(2) + " liters";
+            " has " + Math.round((keg.volume_ml_remain / 1000)) + " liters";
         }
         speechOutput += " of " + keg.type.name + " on tap number " + TapNumber;
       }
@@ -210,14 +210,14 @@ const VolumeHandler = {
         if (VolumeUnits === "pints") {
           speechOutput +=
             " has " +
-            (keg.volume_ml_remain / 473.176).toPrecision(2) +
+            Math.round((keg.volume_ml_remain / 473.176)) +
             " pints";
         } else if (VolumeUnits === "percent" || VolumeUnits === "percentage") {
           speechOutput +=
             " has " + keg.percent_full.toPrecision(2) + " percent";
         } else {
           speechOutput +=
-            " has " + (keg.volume_ml_remain / 1000).toPrecision(2) + " liters";
+            " has " + Math.round((keg.volume_ml_remain / 1000)) + " liters";
         }
         speechOutput += " of " + keg.type.name + " on tap";
         if (kegs.length > 1) {
