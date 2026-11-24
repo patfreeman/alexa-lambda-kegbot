@@ -16,7 +16,7 @@
     "dependencies": {
         "ask-sdk-core": ">=2.8.0",
         "ask-sdk-model": ">=1.28.0",
-        "i18next": ">=11.8.0",
+        "i18next": ">=26.3.4",
         "i18next-sprintf-postprocessor": ">=0.2.0",
         "javascript-time-ago": ">=0.4.0",
         "intl-messageformat": ">0.0.0"
